@@ -37,7 +37,7 @@ class FirebaseConnecter extends Controller
         $Key = $ref;
 
 
-        $auth.auth().signInWithEmailAndPassword($email, $password);
+       // $auth.auth().signInWithEmailAndPassword($email, $password);
 
      //  $key = 'healthyabj,firebaseio,com';
         //var cleanEmail = email.replace('.','`');
