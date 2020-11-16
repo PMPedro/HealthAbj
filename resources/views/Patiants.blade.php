@@ -3,7 +3,7 @@
 @yield('Css')
 
 <div class="FUCKINGBITCH"> 
-
+@yield('Scripts')
 <p>
     Insira dia da consulta:
     <br>

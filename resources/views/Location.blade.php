@@ -1,6 +1,7 @@
 @extends('layouts.Cenas')
 @include('layouts.Cenas')
 @yield('Css')
+@yield('Scripts')
 
 
 <title>Location</title>

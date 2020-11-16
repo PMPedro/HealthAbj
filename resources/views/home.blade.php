@@ -3,7 +3,7 @@
 @extends('layouts.Cenas')
 @include('layouts.Cenas')
 @yield('Css')
-
+@yield('Scripts')
 
 
 @section('content')

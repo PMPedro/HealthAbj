@@ -48,3 +48,17 @@
     
 @endsection
 
+@section('Scripts')
+
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="/__/firebase/6.2.0/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="/__/firebase/6.2.0/firebase-auth.js"></script>
+<script src="/__/firebase/6.2.0/firebase-firestore.js"></script>
+
+
+    
+@endsection
+
