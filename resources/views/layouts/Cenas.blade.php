@@ -62,3 +62,16 @@
     
 @endsection
 
+
+
+@section('HomeBt')
+
+<br>
+
+<form action="/">
+    <input type="submit" value="Home" />
+</form>
+<br>
+<br>
+    
+@endsection

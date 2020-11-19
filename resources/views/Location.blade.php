@@ -2,7 +2,7 @@
 @include('layouts.Cenas')
 @yield('Css')
 @yield('Scripts')
-
+@yield('HomeBt')
 
 <title>Location</title>
     <meta charset="utf-8" />

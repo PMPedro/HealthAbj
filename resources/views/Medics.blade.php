@@ -3,6 +3,7 @@
 @yield('Css')
 
 @yield('Scripts')
+
 <div class="FEKOFF">
     <p>
         Nome do Medico: 

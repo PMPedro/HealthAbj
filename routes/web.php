@@ -34,6 +34,9 @@ Route::get('firebase', 'FirebaseGetData@index');
 
 Route::get('boiola/{Email}/{Password}/{Nome}/{Idade}/{Area}', [App\Http\Controllers\firebaseConnecter::class, 'indexo']);  // Insert data in realtime database //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
 
+Route::get('POCRL/{DCon}/{NMedi}/{NPaci}', [App\Http\Controllers\SendConsultas::class, 'FeckOff']);  // Insert data in realtime database das consultas //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
+Route::get('GODPEDRO', [App\Http\Controllers\GetConsultas::class, 'FeckMe']) ;          //Get data from database das consultas  //MEXER SO COM AUTOTIZACAO DO GOD PEDRO
+
 Route::get('boiola/{Email}/{Password}', [App\Http\Controllers\firebaseConnecter::class, 'indexo']);  // Insert data in realtime database //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
 
 Route::get('boiola', [App\Http\Controllers\firebaseConnecter::class, 'indexo']);  // Insert data in realtime database //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 

@@ -55,7 +55,7 @@
                         <ul>
                             <li><a href="Location">Location</a></li>
                             <li><a href="ContacUs">Contact</a></li>
-                            <li><a href="Patiants">Patients </a></li>
+                            <li><a href="Patiants">Stuff </a></li>
                             <li><a href="Medics">Medics</a></li>
                             <!--<li><a href="#elements">Elements</a></li>-->
                         </ul>
@@ -104,7 +104,7 @@
 
             <!-- Footer -->
                 <footer id="footer">
-                    <h6><p class="copyright">&copy; Template made by: <a href="https://html5up.net">HTML5 UP</a>.</p></h6>
+                    <h6><p class="copyright">&copy; <small>Template made by: <a href="https://html5up.net">HTML5 UP</smallf></a></p></h6>
                 </footer>
 
         </div>

@@ -3,7 +3,7 @@
 @include('layouts.Cenas')
 @yield('Css')
 @yield('Scripts')
-
+@yield('HomeBt')
 
 
 
