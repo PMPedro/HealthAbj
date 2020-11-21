@@ -9,7 +9,7 @@ use Kreait\Firebase\Auth;
 
 class SendConsultas extends Controller
 {
-    public function FeckOff ($DCon,$NMedi,$NPaci) {
+    public function FeckOff ($DCon,$NMedi,$NPaci,$HCon) {
 
         $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
          $database = $factory->createDatabase();
@@ -24,7 +24,8 @@ class SendConsultas extends Controller
         $ref ->push()->getChild(str_replace("-","",$ref ->push()->getKey()))->set([
          'DiaConsulta' =>  $DCon,
          'NomeMedico' => $NMedi,
-         'NomePaciente' => $NPaci,
+         'NomePaciente' => $NPaci, 
+         'HoraConsulta' => $HCon,
          
         
          
