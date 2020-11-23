@@ -13,7 +13,7 @@
 
 <p> Nome do Paciente: <input type="text" id="#NPaci"></p>
 
-<p> Hora da Consulta: <input type="time" id="#Hora"></p>
+ Hora da Consulta: <input type="time" id="#Hora">
 
 
 <p id="CENAS" style="display:none">
@@ -47,20 +47,19 @@
 
     
     
-    Checkbox: <input type="button" value="Adolf"  id="myCheck" onclick="myFunction()">
+    <input type="button" value="Adolf"  id="myCheck" onclick="myFunction()">
     <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-<p id="text" style="display:none">Checkbox is CHECKED!</p> 
+
 
 
 
 <script>
     function Hide2 ()
     {
-        var text = document.getElementById("text");
+      
         var btadd = document.getElementById("#ADDCENAS");
         var btadd2 = document.getElementById("#ADDCENAS2");
 
-        text.style.display = "block";
         btadd.style.display ="none";
         btadd2.style.display ="block";
 

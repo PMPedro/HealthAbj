@@ -3,6 +3,7 @@
 @yield('Css')
 
 @yield('Scripts')
+@yield('HomeBt')
 
 <div class="FEKOFF">
     <p>

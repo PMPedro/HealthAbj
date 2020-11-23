@@ -69,12 +69,90 @@ class FirebaseConnecter extends Controller
 
 
 
+      $factory2 = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
+      $database = $factory2->createFirestore();
+    //  $ref ->push()->getKey();
+     
+      $auth = $factory2->createAuth();
+         $auth->createUserWithEmailAndPassword($Email, $Password) ;
+       // Handle Errors here.
+       $user = $auth->getUserByEmailAndPassword($Email,$Password);
+       
+
+       $uid = $auth->getUserInfo($user->getUid());
+
+
         $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
 
-         $database = $factory->createDatabase();
+        $firestore = $factory->createFirestore();
+         $database = $firestore->database();
+
+         $data = [
+            'Nome' =>  $Nome,
+            'Idade' => $Idade,
+            'Email' => $Email,
+            'Idade' => $Idade,
+            'Area' => $Area,
+        ];
+
+        $database->collection('idk')->document($uid)->set($data);
+
         
+   
+
+       /* $ref ->push()->getChild(str_replace("-","",$ref ->push()->getKey()))->set([
+         'Nome' =>  $Nome,
+         'Idade' => $Idade,
+         'Email' => $Email,
+         'Idade' => $Idade,
+         'Area' => $Area,
         
-        $ref = $database->getReference('Teste');
+         
+      
+         
+        ]); */
+        //$serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/FirebaseKey.json');
+      
+        //$serviceAccount = withServiceAccount::fromJsonFile(__DIR__.'/FirebaseKey.json');
+ 
+         
+         // ...
+       
+
+
+
+            return view('ContacUs');
+
+
+
+            
+   }
+
+   public function __construct(Auth $auth)
+    {
+        $this->auth = $auth;
+    }
+
+
+
+   
+ 
+
+
+}
+
+
+
+
+
+
+/*
+
+   $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
+
+         $database = $factory->createFirestore();
+         
+       $ref = $database->Collection('IDK');
    
         $ref ->push()->getKey();
         $key = 'a';
@@ -97,48 +175,5 @@ class FirebaseConnecter extends Controller
       
          
         ]); 
-        //$serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/FirebaseKey.json');
-      
-        //$serviceAccount = withServiceAccount::fromJsonFile(__DIR__.'/FirebaseKey.json');
-        $factory2 = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
-        $database = $factory2->createDatabase();
-        $ref ->push()->getKey();
-       
-        $auth = $factory2->createAuth();
-           $auth->createUserWithEmailAndPassword($Email, $Password) ;
-         // Handle Errors here.
-         
-         // ...
-       
 
-
-
-            return view('ContacUs');
-
-
-
-            
-   }
-
-   public function __construct(Auth $auth)
-    {
-        $this->auth = $auth;
-    }
-
-
-
-   public function Auth(Type $Email, $Password)
-   {
-   
-      $auth = $factory->createAuth();
-      $auth = app('firebase.auth');
-      $uid = 'some-uid';
-   
-$customToken = $auth->createCustomToken($uid);
-$database.auth().createUserWithEmailAndPassword($Email, $Password);
-      
-   }
-
-
-}
-
+        */
