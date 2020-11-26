@@ -12,16 +12,13 @@ class SendConsultas extends Controller
     public function FeckOff ($DCon,$NMedi,$NPaci,$HCon) {
 
         $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
-         $database = $factory->createDatabase();
-        
-        
-        $ref = $database->getReference('Consultas');
-   
-        $ref ->push()->getKey();
-        $key = 'a';
-        $Key = $ref;
 
-        $ref ->push()->getChild(str_replace("-","",$ref ->push()->getKey()))->set([
+        $firestore = $factory->createFirestore();
+         $database = $firestore->database();
+
+
+
+         $data = [
          'DiaConsulta' =>  $DCon,
          'NomeMedico' => $NMedi,
          'NomePaciente' => $NPaci, 
@@ -31,9 +28,9 @@ class SendConsultas extends Controller
          
       
          
-        ]); 
-
-            return view ("/Patiants");
+        ];
+        $database->collection('ConsultasExis')->document($DCon)->set($data);
+        return redirect('Patiants');
  }
 
 
@@ -44,16 +41,13 @@ class SendConsultas extends Controller
  public function FDSVTF ($DCon,$NMedi,$NPaci,$HCon1,$HCon2,$HCon3,$HCon4,$HCon5,$HCon6,$HCon7,$HCon8,$HCon9,$HCon10) {
 
     $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
-     $database = $factory->createDatabase();
-    
-    
-    $ref = $database->getReference('Consultas');
 
-    $ref ->push()->getKey();
-    $key = 'a';
-    $Key = $ref;
+    $firestore = $factory->createFirestore();
+     $database = $firestore->database();
 
-    $ref ->push()->getChild(str_replace("-","",$ref ->push()->getKey()))->set([
+
+
+     $data = [
      'DiaConsulta' =>  $DCon,
      'NomeMedico' => $NMedi,
      'NomePaciente' => $NPaci, 
@@ -72,9 +66,9 @@ class SendConsultas extends Controller
      
   
      
-    ]); 
-
-        return view ("/Patiants");
+    ];
+    $database->collection('ConsultasExis')->document($DCon)->set($data);
+    return redirect('Patiants');
 }
 
 

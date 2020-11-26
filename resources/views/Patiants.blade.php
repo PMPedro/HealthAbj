@@ -34,9 +34,11 @@
 <br>
 <br>
 
-<a href="GODPEDRO"><h3><b>Listar Consultas</b></h3></a>
+{{-- comment 
+<a href="GODPEDRO" id="yhaoriginal" style="display: block"><h3><b>Listar Consultas</b></h3></a>
+<a href="GODPEDRO2" id="yhasecundario" style="display: none"><h3><b>Listar Consultas</b></h3></a>
 <br>
-
+--}}
 <a id="#ADDCENAS" href="POCRL/" onclick="this.href ='POCRL'+'/'+document.getElementById('#DCon').value+'/'+document.getElementById('#NMedi').value+'/'+document.getElementById('#NPaci').value+'/'+document.getElementById('#Hora').value"   > <h3><b>Adicionar Consultas</b></h3></a>
 
 
@@ -47,7 +49,7 @@
 
     
     
-    <input type="button" value="Adolf"  id="myCheck" onclick="myFunction()">
+    <input type="button" value="Add Consulta"  id="myCheck" onclick="myFunction()">
     <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
 
 
@@ -60,8 +62,15 @@
         var btadd = document.getElementById("#ADDCENAS");
         var btadd2 = document.getElementById("#ADDCENAS2");
 
+
+
+
         btadd.style.display ="none";
         btadd2.style.display ="block";
+
+ 
+
+
 
 
 
