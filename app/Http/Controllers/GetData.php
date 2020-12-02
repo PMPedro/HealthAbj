@@ -50,9 +50,13 @@ foreach ($snapshot as $user) {
     printf(PHP_EOL);
 }
 
+//sleep(10);
+
+
+
 return redirect ("Medics");
 
-    
+    //asasd
 
     }
 }
