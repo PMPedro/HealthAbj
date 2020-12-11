@@ -37,7 +37,7 @@
     <a href="PEDRODEUS">Listar Medicos</a>
 
 <br>
-<a href="boiola/" onclick="this.href ='boiola'+'/'+document.getElementById('#Area').value+'/'+document.getElementById('#Idk').value+'/'+document.getElementById('#MedicName').value+'/'+document.getElementById('Idk2').value+'/'+document.getElementById('#Age').value"   > Adicionar Medicos</a>
+<a href="boiola/" onclick="this.href ='boiola'+'/'+document.getElementById('#Area').value+'/'+document.getElementById('#Idk').value+'/'+document.getElementById('#MedicName').value+'/'+document.getElementById('Idk2').value+'/'+document.getElementById('#Age').value "   > Adicionar Medicos</a>
 
  
  

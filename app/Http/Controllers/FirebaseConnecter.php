@@ -30,24 +30,48 @@ class FirebaseConnecter extends Controller
   
 
          
+         
+
+
         $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
 
         $firestore = $factory->createFirestore();
          $database = $firestore->database();
+
+         $auth->signInWithEmailAndPassword($Email, $Password);
+         $user = $auth->getUserByEmail($Email);
+         $uid = $user->uid;
 
          $data = [
             'Nome' =>  $Nome,
             'Idade' => $Idade,
             'Email' => $Email,
             'Area' => $Area,
+            'usertype' => '1',
         ];
-        
-        $database->collection('MedicosExis')->document($Email)->set($data);
+
+
+        $data2 = [
+            'email' =>  $Email,
+            'name' => $Nome,
+            'profileImageUrl' => 'null',
+            'password' => $Password,
+            'uid' =>  $uid,
+            'usertype' => '1',
+
+        ];
 
 
 
 
-         return redirect('Medics');
+       
+
+        $database->collection('Medico')->document($Email)->set($data);
+        $database->collection('User')->document($Email)->set($data2);
+
+      
+        //$userid = user.uid;
+         return redirect ("Medics");
 
 
 

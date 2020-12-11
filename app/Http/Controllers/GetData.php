@@ -46,6 +46,8 @@ foreach ($snapshot as $user) {
     printf('Email: %s <br>' . PHP_EOL, $MedicosExis['Email']);
     printf('Idade: %s <br>' . PHP_EOL, $MedicosExis['Idade']);
     printf('Area: %s <br>' . PHP_EOL, $MedicosExis['Area']);
+    //printf('Idk whth %s <br>')
+    
     printf('================================================== <br><br><br><br><br>' . PHP_EOL, $MedicosExis['Area']);
     printf(PHP_EOL);
 }
