@@ -51,6 +51,16 @@
 
 
 
+<a id="#ADDCENAS3"  href="POCRL/" onclick="this.href ='POCRL'+'/'+document.getElementById('#DCon').value+'/'+document.getElementById('#NMedi').value+'/'+document.getElementById('#NPaci').value+'/'+document.getElementById('#Hora').value+'/'+document.getElementById('#TC').value"   > <h3><b>Adicionar Consultas2</b></h3></a>
+
+
+<a id="#ADDCENAS4"  href="POCRL/" onclick="this.href ='POCRL'+'/'+document.getElementById('#DCon').value+'/'+document.getElementById('#NMedi').value+'/'+document.getElementById('#NPaci').value+'/'+document.getElementById('#Hora').value+'/'+document.getElementById('#TC').value"   > <h3><b>Adicionar Consultas2</b></h3></a>
+
+
+<a id="#ADDCENAS5"  href="POCRL/" onclick="this.href ='POCRL'+'/'+document.getElementById('#DCon').value+'/'+document.getElementById('#NMedi').value+'/'+document.getElementById('#NPaci').value+'/'+document.getElementById('#Hora').value+'/'+document.getElementById('#TC').value"   > <h3><b>Adicionar Consultas2</b></h3></a>
+
+
+
 <a id="#ADDCENAS2" style="display: none" href="POCRL2/" onclick="this.href ='POCRL2'+'/'+document.getElementById('#DCon').value+'/'+document.getElementById('#NMedi').value+'/'+document.getElementById('#NPaci').value+'/'+document.getElementById('#Hora').value+'/'+document.getElementById('#Hora2').value+'/'+document.getElementById('#Hora3').value+'/'+document.getElementById('#Hora4').value+'/'+document.getElementById('#Hora5').value+'/'+document.getElementById('#Hora6').value+'/'+document.getElementById('#Hora7').value+'/'+document.getElementById('#Hora8').value+'/'+document.getElementById('#Hora9').value+'/'+document.getElementById('#Hora10').value"   > <h3><b>Adicionar Consultas</b></h3></a>
 
 
