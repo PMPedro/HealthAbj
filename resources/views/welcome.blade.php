@@ -55,8 +55,8 @@
                         <ul>
                             <li><a href="Location">Location</a></li>
                             <li><a href="ContacUs">Contact</a></li>
-                            <li><a href="Patiants">Stuff </a></li>
-                            <li><a href="Medics">Medics</a></li>
+                            <li><a href="Backoffice">Back </a></li>
+                            <li><a href="Backoffice">Office</a></li>
                             <!--<li><a href="#elements">Elements</a></li>-->
                         </ul>
                     </nav>

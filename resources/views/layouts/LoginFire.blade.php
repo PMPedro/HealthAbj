@@ -26,7 +26,11 @@
     
     <a href="LoginFire/" onclick="this.href ='LoginFire'+'/'+document.getElementById('#emaillogin').value+'/'+document.getElementById('#Password').value"   >      <h2> Login2   </h2>     </a>    
 
-    <a href=""> <h6> Create Account </h6></a>
+
+
+    {{-- 
+        <a href=""> <h6> Create Account </h6></a> 
+    --}}
 
 
 

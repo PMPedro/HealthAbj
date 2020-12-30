@@ -23,10 +23,15 @@ Route::get('AboutUs',  function () {           return view('AboutUs');    });
 Route::get('Login',  function () {           return view('Auth/Login');    });
 Route::get('Register',  function () {           return view('Auth/Register');    });
 Route::get('Cenas',  function () {           return view('Cenas');    });
+Route::get('LoginFire',  function () {           return view('layouts/LoginFire');    });
 Route::get('Medics',  function () {           return view('Medics');    });
+Route::get('MedicsSecret',  function () {           return view('Medics');    });
 Route::get('Patiants',  function () {           return view('Patiants');    })/*->middleware('auth')*/;   //isto faz com q seja preciso login antes de entrar na pagina 
 Route::get('ContacUs',  function () {           return view('ContacUs');    });
-Route::get('LoginFire',  function () {           return view('layouts/LoginFire');    });
+
+Route::get('Backoffice',  function () {           return view('BackOffice');    })->middleware('LoggedIn');
+Route::get('BackofficeSecret',  function () {           return view('BackOffice');    });
+
 Route::get('Location',  function () {           return view('Location');    });
 Route::get('firebase', 'FirebaseGetData@index');
 
@@ -42,7 +47,7 @@ Route::get('GODPEDRO2', [App\Http\Controllers\GetConsultas::class, 'idkFECKME2']
 
 
 Route::get('LoginFire/{Email}/{Password}', [App\Http\Controllers\LoginwFire::class, 'LoginFire']) ;          //Get data from database  //MEXER SO COM AUTOTIZACAO DO GOD PEDRO
-
+Route::get('StatusCheck', [App\Http\Controllers\LoginwFire::class, 'StatusCheck']) ;          //Get data from database  //MEXER SO COM AUTOTIZACAO DO GOD PEDRO
 
 Route::get('boiola/{Email}/{Password}', [App\Http\Controllers\firebaseConnecter::class, 'indexo']);  // Insert data in realtime database //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
 

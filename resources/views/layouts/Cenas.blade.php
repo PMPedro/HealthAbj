@@ -75,3 +75,15 @@
 <br>
     
 @endsection
+
+@section('BtReturnBackOffice')
+
+<br>
+
+<form action="BackofficeSecret">
+    <input type="submit" value="Back Office" />
+</form>
+<br>
+<br>
+    
+@endsection

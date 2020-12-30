@@ -16,12 +16,13 @@ class LoginwFire extends Controller
         
         $factory2 = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
       $database = $factory2->createFirestore();
-
-
-
-
        $auth = $factory2->createAuth();
-       if($auth == null ){
+         //    $auth->signOut();        
+       
+       if($auth != null) {  
+     return redirect("BackofficeSecret");    }
+
+
        $auth->signInWithEmailAndPassword($email, $password);
 
 
@@ -60,13 +61,13 @@ class LoginwFire extends Controller
                         if($tipouser == 0){
 
                             echo '<script>alert("Voce não tem permissao para aceder! ")</script>'; 
-                            return redirect ('LoginFire');
+                            return redirect ('/');
                         }
                         
                         elseif ($tipouser == 1)
                         {
 
-                            return redirect ('Medics');
+                            return redirect ('BackofficeSecret');
                         }
                         
 
@@ -82,11 +83,29 @@ class LoginwFire extends Controller
 
          }
 
-        }
-         else
-        return("Ja esta logado");
+        
+         
+        
             //
 
 
     }
+    public function StatusCheck () {
+
+        $factory2 = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
+        $database = $factory2->createFirestore();
+         $auth = $factory2->createAuth();
+         if($auth == null ){ 
+            return redirect  ("LoginFire");
+         }
+         else {
+            return redirect ('Medics');
+         }
+
+
+    }
+
+
+
+
 }

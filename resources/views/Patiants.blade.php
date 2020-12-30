@@ -4,7 +4,7 @@
 
 <div class="FUCKINGBITCH"> 
 @yield('Scripts')
-@yield('HomeBt')
+@yield('BtReturnBackOffice')
 <input type="button" value="Mais que 1 consulta"  id="myCheck" style="float: right" onclick="myFunction()">
 
 <p> Dia da Consulta: <br><input type="date" id="#DCon"></p>
