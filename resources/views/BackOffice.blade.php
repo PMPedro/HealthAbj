@@ -5,8 +5,10 @@
 @yield('Scripts')
 @yield('HomeBt')
 
+<body class="bg">
+    
 
-<div class="Body?Back" style="align-content: center">
+<div class="BodyBack" >
 
     <form action="Medics">
         <input type="submit" value="Criar Medicos" />

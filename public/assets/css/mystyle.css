@@ -1,0 +1,82 @@
+
+
+.body {
+
+background-color: blue;
+
+}
+.all{
+    background-image: url("bg.jpg");
+}
+.bg{
+    background-color: rgba(49, 153, 250, 1);
+
+}
+
+.mapp {
+    margin: left;
+
+    
+
+
+
+}
+.HomeBt{
+    background-color: rgba(49, 153, 250, 1);
+
+    
+  
+}
+
+.emailborther{
+    text-align: center;
+
+        background-color: black;
+        padding: 5%;
+}
+.LoginData{
+    margin: auto;
+    width: 50%;
+    border: 5px solid white;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+
+    
+    
+}
+
+.BodyBack {
+
+    margin: auto;
+    width: 50%;
+    border: 5px solid white;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 30vh;
+    background-color: black;
+}
+
+.MedicsContent {
+    margin: auto;
+    width: 50%;
+    border: 5px solid white;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 30vh;
+
+}
+
+.data {
+
+background-color:rgba(49, 153, 250, 1) ;
+
+}

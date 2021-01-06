@@ -6,17 +6,19 @@
 @yield('HomeBt')
 
 
+<body class="bg">
+    
 
 <div id="Cenas Login">
 
-
+<div class="LoginData">
 <p>
     Email:
     <input type="text"  id="#emaillogin">
 </p>
 
 <p>
-    password:
+    Password:
     <input type="password"  id="#Password">
 </p>
 
@@ -24,8 +26,8 @@
 
 
     
-    <a href="LoginFire/" onclick="this.href ='LoginFire'+'/'+document.getElementById('#emaillogin').value+'/'+document.getElementById('#Password').value"   >      <h2> Login2   </h2>     </a>    
-
+    <a href="LoginFire/" onclick="this.href ='LoginFire'+'/'+document.getElementById('#emaillogin').value+'/'+document.getElementById('#Password').value"   >      <h2> Login   </h2>     </a>    
+</div>
 
 
     {{-- 

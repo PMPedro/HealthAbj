@@ -4,7 +4,13 @@
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <link rel="stylesheet" href="assets/css/mystyle.css" />
+
+   
+
 
     </div>
 
@@ -66,24 +72,21 @@
 
 @section('HomeBt')
 
-<br>
+
 
 <form action="/">
     <input type="submit" value="Home" />
 </form>
-<br>
-<br>
+
     
 @endsection
 
 @section('BtReturnBackOffice')
 
-<br>
 
 <form action="BackofficeSecret">
     <input type="submit" value="Back Office" />
 </form>
-<br>
-<br>
+
     
 @endsection

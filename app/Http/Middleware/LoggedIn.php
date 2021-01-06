@@ -22,7 +22,7 @@ class LoggedIn
     {
          
 
-        return redirect('LoginFire/Email/Password');
+        return redirect('LoginFire');
        
 
         

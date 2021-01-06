@@ -19,7 +19,11 @@ class LoginwFire extends Controller
        $auth = $factory2->createAuth();
          //    $auth->signOut();        
        
-       if($auth != null) {  
+
+      //   $auth->signOut();
+
+
+       if($auth == null) {  
      return redirect("BackofficeSecret");    }
 
 

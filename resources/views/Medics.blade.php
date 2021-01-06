@@ -5,6 +5,9 @@
 @yield('Scripts')
 @yield('BtReturnBackOffice')
 
+<body class="bg">
+    <div class="MedicsContent">
+
 <div class="FEKOFF">
     <p>
         Nome do Medico: 
@@ -26,7 +29,7 @@
 <p>
     Data de Nascimento: 
 
-<input type="date" id="Idk2">    
+<input type="date" id="Idk2" class="data">    
 
 
 
@@ -40,7 +43,7 @@
 <a href="boiola/" onclick="this.href ='boiola'+'/'+document.getElementById('#Area').value+'/'+document.getElementById('#Idk').value+'/'+document.getElementById('#MedicName').value+'/'+document.getElementById('Idk2').value+'/'+document.getElementById('#Age').value "   > Adicionar Medicos</a>
 
  
- 
+</div>
 
 
 </div>
