@@ -19,64 +19,89 @@ use Kreait\Firebase\Auth;
 
 class FirebaseConnecter extends Controller
 {
-   public function indexo ($Email,$Password,$Nome,$Idade,$Area) {
+   public function indexo ( $Email,$Password,$Nome, $Idade, $Area ) {
+
+   
 
 
 
-      $factory2 = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
-      $database = $factory2->createFirestore();
-       $auth = $factory2->createAuth();
-         $auth->createUserWithEmailAndPassword($Email, $Password) ;
   
 
+    $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
+
          
-         
+ 
 
 
-        $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
+    $factory2 = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
+    $database = $factory2->createFirestore();
+     $auth = $factory2->createAuth();
+    
+ 
+     
+       $auth->createUserWithEmailAndPassword($Email, $Password) ;
+      
+   $firestore = $factory->createFirestore();
 
-        $firestore = $factory->createFirestore();
-         $database = $firestore->database();
+     $database = $firestore->database();
 
-         $auth->signInWithEmailAndPassword($Email, $Password);
-         $user = $auth->getUserByEmail($Email);
-         $uid = $user->uid;
+   //return redirect ("Medics");
+   
+     $auth->signInWithEmailAndPassword($Email, $Password);
 
+     $user = $auth->getUserByEmail($Email);
+     $uid = $user->uid;
+
+      
+       
+
+   
+       
          $data = [
-            'Nome' =>  $Nome,
-            'Idade' => $Idade,
-            'Email' => $Email,
-            'Area' => $Area,
+            'uid' =>  $uid,
+            'name' =>  $Nome,
+            'email' => $Email,
+            'password' => $Password,
+            'dateNascimento' =>$Idade,
+            'profileImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/healthyabj.appspot.com/o/images%2F5591ddd2-4dab-4830-8642-a2810ec766de?alt=media&token=63837eb0-8527-48e7-9b44-4e830d0979ff',        
             'usertype' => '1',
+            'Permissao' => '1',
         ];
-
-
+    
+    
         $data2 = [
             'email' =>  $Email,
             'name' => $Nome,
-            'profileImageUrl' => 'null',
+            'profileImageUrl' => 'https://firebasestorage.googleapis.com/v0/b/healthyabj.appspot.com/o/images%2F5591ddd2-4dab-4830-8642-a2810ec766de?alt=media&token=63837eb0-8527-48e7-9b44-4e830d0979ff',
             'password' => $Password,
             'uid' =>  $uid,
+            'dateNascimento' =>$Idade,
             'usertype' => '1',
-
+    
         ];
-
-
-
-
+    
+    
+    
+    
        
+    
 
-        $database->collection('Medico')->document($Email)->set($data);
-        $database->collection('User')->document($Email)->set($data2);
+        $database->collection('User')->document($Email)->set($data);
+        return redirect ("Medics");
 
-      
-        //$userid = user.uid;
-         return redirect ("Medics");
+ 
+     
+     //$userid = user.uid;
 
+
+    
+    }
 
 
             
-   }
+
+
+ 
 
    public function __construct(Auth $auth)
     {
@@ -85,13 +110,20 @@ class FirebaseConnecter extends Controller
 
 
 
-   
- 
 
 
 }
 
+ 
 
 
 
 
+
+/*
+
+      $factory2 = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
+      $database = $factory2->createFirestore();
+       $auth = $factory2->createAuth();
+         $auth->createUserWithEmailAndPassword($Email, $Password) ;
+         */

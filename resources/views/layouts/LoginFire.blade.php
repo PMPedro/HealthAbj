@@ -24,9 +24,11 @@
 
 
 
+    <div class="login">
+        <a href="LoginFire/" onclick="this.href ='LoginFire'+'/'+document.getElementById('#emaillogin').value+'/'+document.getElementById('#Password').value"   >      <h2> Login   </h2>     </a>    
 
-    
-    <a href="LoginFire/" onclick="this.href ='LoginFire'+'/'+document.getElementById('#emaillogin').value+'/'+document.getElementById('#Password').value"   >      <h2> Login   </h2>     </a>    
+    </div>
+   
 </div>
 
 

@@ -47,7 +47,7 @@
                         <div class="inner">
                             <h1>Health Abj </h1>
                             <h6><p> </a></h6> 
-                            <p>Website made by: <p>Pedro Martins | Gonçalo Soares | Francisco  </p>  </p>
+                            <p>Website made by: <p>Pedro Martins | Gonçalo Soares   </p>  </p>
                             
                         </div>
                     </div>

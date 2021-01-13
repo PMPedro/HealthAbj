@@ -46,10 +46,43 @@ background-color: blue;
     
 }
 
+.login{
+
+    text-align: center;
+    vertical-align: middle;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    
+}
+svg
+{
+	width: 0;
+	height: 0;
+}
+.foto{
+    display: flex;
+    justify-content: center;
+	margin: 0;
+	padding: 0;
+	animation: animate 20s linear infinite;
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: rotate(360deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}
+}
+
 .BodyBack {
 
     margin: auto;
-    width: 50%;
+    width:fit-content;
     border: 5px solid white;
     padding: 20px;
     text-align: center;
@@ -58,7 +91,7 @@ background-color: blue;
     align-items: center;
     display: flex;
     min-height: 30vh;
-    background-color: black;
+    background-color: rgb(12, 181, 233);
 }
 
 .MedicsContent {
@@ -79,4 +112,17 @@ background-color: blue;
 
 background-color:rgba(49, 153, 250, 1) ;
 
+}
+
+.Button2 {
+
+    
+  
+  
+  
+
+    width:fit-content;
+    text-align: center;
+    align-items: center;
+    display: flex;
 }
