@@ -26,12 +26,14 @@ Route::get('Cenas',  function () {           return view('Cenas');    });
 Route::get('LoginFire',  function () {           return view('layouts/LoginFire');    });
 Route::get('Medics',  function () {           return view('Medics');    });
 Route::get('MedicsSecret',  function () {           return view('Medics');    });
-Route::get('Patiants',  function () {           return view('Patiants');    })/*->middleware('auth')*/;   //isto faz com q seja preciso login antes de entrar na pagina 
+Route::get('Consultas',  function () {           return view('Patiants');    })/*->middleware('auth')*/;   //isto faz com q seja preciso login antes de entrar na pagina 
 Route::get('ContacUs',  function () {           return view('ContacUs');    });
 Route::get('Backoffice',  function () {           return view('BackOffice');    })->middleware('LoggedIn');
 Route::get('BackofficeSecret',  function () {           return view('BackOffice');    });
 Route::get('Enfermeiros',  function () {           return view('Enfermeiros');    });
 Route::get('Permitir',  function () {           return view('Permitir');    });
+
+
 
 
 Route::get('Location',  function () {           return view('Location');    });
@@ -55,9 +57,16 @@ Route::get('Updatedat/{Email}', [App\Http\Controllers\UpdateStatus::class, 'Upda
 
 Route::get('boiola2', [App\Http\Controllers\firebaseConnecter::class, 'indexo']);  // Insert data in realtime database //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
  
+Route::get('hmFazCenaspls/{Hourum}/{Emailuma}/{Emaildois}/{dataum}/{moredataum}', [App\Http\Controllers\Janemseioqporaqui::class, 'SendConsultasporra']);  // Insert data in realtime database das consultas //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
 
-Route::get('POCRL/{DCon}/{NMedi}/{NPaci}/{Hora}/{type}', [App\Http\Controllers\SendConsultas::class, 'FeckOff']);  // Insert data in realtime database das consultas //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
-Route::get('POCRL2/{DCon}/{NMedi}/{NPaci}/{Hora1}/{Hora2}/{Hora3}/{Hora4}/{Hora5}/{Hora6}/{Hora7}/{Hora8}/{Hora9}/{Hora10}', [App\Http\Controllers\SendConsultas::class, 'FDSVTF']);  // Insert data in realtime database das consultas //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
+
+Route::get('FDSPOCRL/{Houru}/{Emailum}/{Emaildoi}/{datau}/{moredatau}', [App\Http\Controllers\Consultinhasporra::class, 'FeckingFeck']);  // Insert data in realtime database das consultas //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
+
+
+
+//Route::get('POCRL/{Hour}/{Email}/{data}/{moredata}', [App\Http\Controllers\SendConsultas::class, 'SendConsultasporra']);  // Insert data in realtime database das consultas //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
+//Route::post('hmFazCenaspls/{Hour}/{Email}/{emailtwo}/{data}/{moredata}', [App\Http\Controllers\SendConsultas::class, 'SendConsultasporra']);  // Insert data in realtime database das consultas //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
+Route::get('Sera', [App\Http\Controllers\guardaConsultasr::class, 'guacon']);  // Insert data in realtime database //MEXER SO COM AUTOTIZACAO DO GOD PEDRO 
 Route::get('GODPEDRO', [App\Http\Controllers\GetConsultas::class, 'idkFECKME']) ;          //Get data from database  //MEXER SO COM AUTOTIZACAO DO GOD PEDRO
 Route::get('GODPEDRO2', [App\Http\Controllers\GetConsultas::class, 'idkFECKME2']) ;          //Get data from database  //MEXER SO COM AUTOTIZACAO DO GOD PEDRO
 

@@ -6,7 +6,7 @@
 @yield('HomeBt')
 
 
-<body class="bg">
+<body class="bg2">
     
 
 <div id="Cenas Login">

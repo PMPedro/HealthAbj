@@ -7,9 +7,11 @@ use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Auth;
 
-class SendConsultas extends Controller
+class Janemseioqporaqui extends Controller
 {
-    public function FeckOff ($DCon,$NMedi,$NPaci,$HCon,$Area) {
+    public function SendConsultasporra ($DCon,$NMedi,$NPaci,$HCon,$Area) {
+
+
 
         $factory = (new Factory)->withServiceAccount(__DIR__.'/FirebaseKey.json');
 
@@ -18,22 +20,24 @@ class SendConsultas extends Controller
 
 
 
-         $data = [
+         $datagg = [
          'DiaConsulta' =>  $DCon,
          'EmailMedico' => $NMedi,
          'EmaiPaciente' => $NPaci, 
          'HoraConsulta' => $HCon,
          'Area' => $Area,
 
-         
-        
-         
-      
-         
         ];
-        $id = mt_rand(0, 999999999999999999) ;
-        $database->collection('Consultas')->document($id)->set($data);
-        return redirect('Patiants');
+        $idgg = mt_rand(0, 999999999999999999) ;
+        $database->collection('Teste')->document($idgg)->set($datagg);
+        return redirect('Consultas');
+
+
+        
+
+        return "FACK OFF CARALHO";
+
+
  }
 
 
@@ -71,7 +75,7 @@ class SendConsultas extends Controller
      
     ];
     $database->collection('ConsultasExis')->document($DCon)->set($data);
-    return redirect('Patiants');
+    return redirect('Consultas');
 }
 
 
@@ -81,3 +85,6 @@ class SendConsultas extends Controller
 
 
     
+/*
+
+        */
