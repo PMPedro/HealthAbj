@@ -192,11 +192,25 @@
 
 
 
+<script>
+    function teste() {
+        var a = document.getElementById('#NMedi1').value;
+        var b = a.replace('.', '|')
+
+    return b;
+    }
+
+    function teste1() {
+        var a = document.getElementById('#NPaci1').value;
+        var b = a.replace('.', '|')
+
+    return b;
+    }
+    
+    </script>
 
 
-
-<a id="#ADDCENAS"  href="FDSPOCRL/" onclick="this.href ='FDSPOCRL'+'/'+document.getElementById('#DCon1').value+'/'+document.getElementById('#NMedi1').value+'/'+document.getElementById('#NPaci1').value+'/'+document.getElementById('#Hora1').value+'/'+document.getElementById('#TC1').value"   > <h3><b>Registar Consulta</b></h3></a>
-
+<a id="#ADDCENAS"  href="FDSPOCRL/" onclick="this.href ='FDSPOCRL'+'/'+document.getElementById('#DCon1').value+'/'+teste()+'/'+teste1()+'/'+document.getElementById('#Hora1').value+'/'+document.getElementById('#TC1').value"   > <h3><b>Registar Consulta</b></h3></a>
 
 
 
